@@ -8,8 +8,8 @@ public class TakeValueFromKeyboard {
 		int a = sc.nextInt();
 		System.out.println("Enter the value of b ");
 		int b = sc.nextInt(); //predefined method, there is one for each datatype
-		int sum = a+b;
 		sc.close();
+		int sum = a+b;
 		System.out.println("The sum of the two numbers is "+sum);
 
 	}
