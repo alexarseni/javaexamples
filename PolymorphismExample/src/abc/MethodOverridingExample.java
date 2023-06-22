@@ -10,6 +10,6 @@ public class MethodOverridingExample {
 		//which method will be used is decided on runtime based on the object that called the method
 		Pulsar pu = new Pulsar();
 		pu.color();
-		pu.speed(); //the pulsar class does not have a speed method, so the method of the Bike class is used
+		pu.speed(); 
 	}
 }

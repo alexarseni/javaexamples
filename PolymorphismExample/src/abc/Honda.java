@@ -9,4 +9,7 @@ public class Honda extends Bike{ //Honda is a type of bike. single inheritance
 	void speed() {
 		System.out.println("50km/hr");
 	}
+	void mailage() {
+		System.out.println("55hm/lt");
+	}
 }
