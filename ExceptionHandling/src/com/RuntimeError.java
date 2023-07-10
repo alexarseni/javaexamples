@@ -11,6 +11,7 @@ public class RuntimeError {
 	}
 	catch(Exception e) {
 		System.out.println(e.getMessage()); //EXCEPTION MESSAGE IN SHORT
+		e.printStackTrace();
 	}
 	System.out.println("THIS WILL BE EXECUTED BECAUSE WE CAUGHT THE EXCEPTION");
 	}
