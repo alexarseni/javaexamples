@@ -4,6 +4,9 @@ class A implements Runnable {
 	@Override
 	//it is mandatory to override the run method, because it is part of the interface
 	public void run() {
+		//create a thread object to view the name of the current thread
+		Thread t = Thread.currentThread();
+		System.out.println(t);
 		for (int i = 0; i<=1000;i++) {
 			System.out.println("i "+i);
 		}
@@ -13,6 +16,8 @@ class A implements Runnable {
 class B implements Runnable {
 	@Override
 	public void run() {
+		Thread t = Thread.currentThread();
+		System.out.println(t);
 		for (int j = 0; j<=1000;j++) {
 			System.out.println("j "+j);
 		}
