@@ -14,7 +14,7 @@ public class ArrayListDemo {
 		System.out.println("Size "+al.size());*/
 		ArrayList al = new ArrayList();
 		
-		al.add("Lex");
+		/*al.add("Lex");
 		al.add("Steven");
 		al.add("John");
 		System.out.println(al);
@@ -28,6 +28,18 @@ public class ArrayListDemo {
 		al.remove("Lex");//remove by value
 		al.remove(2);//we can also remove by index position
 		System.out.println(al);
+		System.out.println(al.indexOf("Raju")); //will return the first index that the element is found
+		*/
+		
+		al.add(0);
+		al.add(3);
+		al.add(6);
+		al.add(1);
+		al.remove(1); //this will remove element in index position 1 ie 3
+		System.out.println(al);
+		al.remove(new Integer(6)); //this will remove the element with value 6
+		System.out.println(al);
+		
 	}
 
 }
