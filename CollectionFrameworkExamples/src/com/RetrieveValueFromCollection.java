@@ -1,6 +1,9 @@
 package com;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 
 public class RetrieveValueFromCollection {
@@ -29,7 +32,33 @@ public class RetrieveValueFromCollection {
 			//not an array of primitive type
 			System.out.println(hs);
 		}
+		Iterator ii = ss.iterator();
+		while(ii.hasNext()) {
+			Object obj = ii.next();
+			if(ii.hasNext()) {
+				if(obj.equals(10)) {
+					System.out.println("Removing element");
+					ii.remove();
+				}
+			}
+			System.out.println("next object:"+obj);
+		}
+		System.out.println(ss);
 		
+		Map mm = new HashMap();
+		mm.put("A", "X");
+		mm.put("B", "Y");
+		mm.put("C", "Z");
+		
+		//map does not provide any iterator method, so we need to convert the
+		//map to set in order to use the iterator method
+		Set ss1 = mm.entrySet();
+		Iterator ii1 = ss1.iterator();
+		
+		while(ii1.hasNext()) {
+			Object obj = ii1.next();
+			System.out.println(obj);
+			
+		}	
 	}
-
 }
