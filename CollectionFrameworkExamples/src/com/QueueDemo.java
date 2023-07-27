@@ -8,7 +8,10 @@ public class QueueDemo {
 
 	public static void main(String[] args) {
 		Queue q1 = new LinkedList(); //interface Queue, class linkedList
+		//this way we will call only the methods corresponding to the queue interface
+		//not the methods corresponding to the List interface
 		Queue q2 = new PriorityQueue();
+		
 		
 		q1.add(3);
 		q1.add(1);
