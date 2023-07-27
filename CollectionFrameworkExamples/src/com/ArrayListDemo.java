@@ -38,7 +38,7 @@ public class ArrayListDemo {
 		al.remove(1); //this will remove element in index position 1 ie 3
 		System.out.println(al);
 		al.remove(new Integer(6)); //this will remove the element with value 6
-		System.out.println(al);
+		System.out.println(al); //control + / to comment/uncomment a whole section
 		
 	}
 
