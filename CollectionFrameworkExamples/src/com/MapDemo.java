@@ -25,7 +25,7 @@ public class MapDemo {
 		System.out.println(hm.containsValue("Lex"));
 		System.out.println(hm.containsValue("Maria"));
 		
-		System.out.println(hm.get(2)); //get value ofkey 2
+		System.out.println(hm.get(2)); //get value of key 2
 		
 		hm.remove(3); //remove the pair with key 3
 		System.out.println(hm);
