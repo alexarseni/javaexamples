@@ -47,6 +47,9 @@ public class ArraysDemo {
 		else {
 			System.out.println("Element present");
 		}
+		String name1 = "Alex", name2 = "Maria";
+		System.out.println(name1.compareTo(name2));//anything other than 0 menas the str
+		System.out.println(name1.codePointAt(0));
 		
 	}
 	
