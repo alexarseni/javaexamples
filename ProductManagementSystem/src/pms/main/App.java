@@ -33,7 +33,7 @@ public class App {
 			price = sc.nextFloat();
 			
 			Product p = new Product(pid,pname,price); //created the product object, but haven't saved it in our list
-			result = ps.storeProduct(p);
+			result = ps.storeProduct(p); //store the return value of the storeProduct method
 			System.out.println(result);
 			break;
 			

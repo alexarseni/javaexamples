@@ -1,6 +1,8 @@
 package com.main;
-//import com.bean.Product; //this is the prefered method to import from other packages
-import com.bean.*;    //the star imports all classes inside the com.bean package
+import java.util.Scanner;
+
+import com.bean.Product; //this is the preferred method to import from other packages
+//import com.bean.*;    //the star imports all classes inside the com.bean package
 //this will affect performance if the package has a substantial amount of classes
 //import java.util.Scanner;
 
@@ -11,7 +13,7 @@ public class DemoTest {
 		Product p = new Product(); //we are getting an error because we have define a parameter constructor in the product class
 		//so we must provide values for the object, or explicitly define the default constructor
 		Product p1 = new Product(101,"Computer",2000);
-		//Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
 		p.setPid(100);
 		p.setPname("TV");
@@ -25,7 +27,8 @@ public class DemoTest {
 		System.out.println("Get pname "+p1.getPname());
 		System.out.println("Get price "+p1.getPrice());
 		
-		System.out.println(p);
+		System.out.println(p); //when we use the variable to display its value, the toString method of the Object class is
+		//automatically called packagename.classname@hashc.ode Here, we are overriding that method, with our own
 		System.out.println(p1.toString());
 		
 	}

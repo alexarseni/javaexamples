@@ -13,7 +13,7 @@ private List<Product> listOfProducts = new ArrayList<Product>(); //i do not want
 
 public String storeProduct(Product product) {
 	
-	int flag=0;
+	int flag=0; //make sure flag is zero everytime we run this code to add a new product
 	if(listOfProducts.size()==0) {
 		listOfProducts.add(product);
 		return "Product details stored succcessfully";
