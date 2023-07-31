@@ -10,9 +10,9 @@ public class App {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		ProductService ps =new ProductService();
+		ProductService ps =new ProductService(); //we need a service object to acess the services
 		int pid;
-		String pname;
+		String pname; //temporary variables to get the product information
 		float price;
 		String con;
 		int choice;
@@ -24,7 +24,7 @@ public class App {
 			switch(choice) {
 			case 1: System.out.println("Add product");
 			System.out.println("Enter product ID");
-			pid = sc.nextInt();
+			pid = sc.nextInt(); //we are getting user input in the main method, as per the coding standards
 			
 			System.out.println("Enter the product name");
 			pname = sc.next();
@@ -32,7 +32,7 @@ public class App {
 			System.out.println("Enter product price");
 			price = sc.nextFloat();
 			
-			Product p = new Product(pid,pname,price);
+			Product p = new Product(pid,pname,price); //created the product object, but haven't saved it in our list
 			result = ps.storeProduct(p);
 			System.out.println(result);
 			break;
