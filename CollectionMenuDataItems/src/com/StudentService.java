@@ -12,6 +12,7 @@ public class StudentService {
 	//we will take the values through the keyboard
 	Scanner sc = new Scanner(System.in); //object sc will be taking input from System.in
 	
+	//first business method
 	public void addStudent() {
 		System.out.println("Enter student ID");
 		int id = sc.nextInt();
@@ -25,9 +26,11 @@ public class StudentService {
 			System.out.println("Information inserted successfully");
 		}
 	}
+	//second business method
+	public void numberOfStudents() {
+		System.out.println("Number of student details "+stdnames.size());
+	}
 	
 	
 	
-	
-
 }
