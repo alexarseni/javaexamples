@@ -52,7 +52,7 @@ public class StudentService {
 	//fourth business method- remember there is not iterator in map, we need to create a set 
 	public void displayStudentOneByOne() {
 		Set<?> ss = stdnames.entrySet(); //converting map to set. with set we can use the iterator or the foreach loop
-		Iterator<?> ii = ss.iterator();
+		Iterator<?> ii = ss.iterator(); //the question mark as a wild-card
 		while(ii.hasNext()) {
 			Object std = ii.next(); //the first time we execute ii.next, it retrieves the first of the elements.
 			System.out.println(std);
@@ -65,6 +65,23 @@ public class StudentService {
 		while(ii.hasNext()) {
 			Object key = ii.next(); //the first time we execute ii.next, it retrieves the first of the elements.
 			System.out.println(key+" "+ stdnames.get(key)); //display the record that corresponds to this key
+		}
+	}
+	public void searchDataUsingKey(int key) {
+		if(stdnames.containsKey(key)) {
+			System.out.println("Your value is "+stdnames.get(key));
+		}
+		else {
+			System.out.println("No record present");
+		}
+	}
+	public void removeDataUsingKey(int key) {
+		if(stdnames.containsKey(key)) {
+			stdnames.remove(key);
+			System.out.println("Record removed");
+		}
+		else {
+			System.out.println("No record present");
 		}
 	}
 }

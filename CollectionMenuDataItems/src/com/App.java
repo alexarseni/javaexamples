@@ -10,8 +10,10 @@ public class App {
 		StudentService ss = new StudentService();
 		String con;
 		int choice;
+		int key;
 		do {
 			System.out.println("Please choose\n1.Add Student 2. Number of Students 3. Student Information 4. Student Info One By One 5. Key approach");
+			System.out.println("6. Search data with key 7. Remove data with key");
 			choice = sc.nextInt();
 			switch(choice) {
 			case 1: ss.addStudent();
@@ -24,7 +26,14 @@ public class App {
 					break;
 			case 5: ss.getOnlyKeys();
 					break;
-
+			case 6: System.out.println("Please give me the key ");
+					key = sc.nextInt(); //I am asking for the value in the main method, usually the case
+					ss.searchDataUsingKey(key);
+					break;
+			case 7: System.out.println("Please give me the key ");
+					key = sc.nextInt(); //I am asking for the value in the main method, usually the case
+					ss.removeDataUsingKey(key);
+					break;
 			default: System.out.println("Wrong choice");
 			}
 			
