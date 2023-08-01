@@ -26,7 +26,8 @@ public class DemoTest {
 		// TODO Auto-generated method stub
 		//Employee emp = new Employee(); //not possible since the Employee constructor is private and we are outside the Employee class.
 		//emp.display
-		
+		Employee e = Employee.getInstance(); //we don't use the keyword new, we call the method
+		e.display(); //now we can call the employee methods through the newly created object
 	}
 
 }
