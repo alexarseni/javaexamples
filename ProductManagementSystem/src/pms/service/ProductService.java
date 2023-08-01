@@ -9,6 +9,11 @@ public class ProductService {
 
 private List<Product> listOfProducts = new ArrayList<Product>(); //i do not want other methods to access
 //the listOfProducts directly, only through my own method
+//this variable is initialised everytime we run the program, data is not saved permanently
+{
+
+listOfProducts.add(new Product(1, "TV", 5600)); //initial product for testing purposes
+}
 
 public String storeProduct(Product product) {
 	
@@ -58,4 +63,45 @@ public int numberOfProduct() {
 	return listOfProducts.size();
 }
 
+public String deleteProduct(int pid) {
+	int flag =0; 
+	Iterator<Product> li = listOfProducts.iterator();
+	while(li.hasNext()) {
+		Product p = li.next();
+		if(p.getPid() == pid) { //find the elements with the argument pid
+			listOfProducts.remove(p); //removing by the object, not the iterator
+			//li.remove();
+			flag++; //parsing the Arraylist elements one by one
+			break;
+		}
+	}
+	if (flag == 0) {
+		return "Product not present";
+	}
+	else {
+		return "Product removed successfully";
+	}
+	
+}
+
+public String updateProduct(Product product) {
+	int flag = 0;
+	Iterator<Product> li = listOfProducts.iterator();
+	while(li.hasNext()) {
+		Product p = li.next();
+		if(p.getPid()==product.getPid()) { //find the element we want to update based on its pid
+			p.setPrice(product.getPrice()); //update the old price with the newly inserted price
+			flag++;
+			break;
+		}
+		
+	}
+	if (flag ==0) return"Product not present";
+	else return "Product updated successfully";
+	}
+
+public List<Product> displayAllProducts() {
+	return listOfProducts;
+	
+}
 }
