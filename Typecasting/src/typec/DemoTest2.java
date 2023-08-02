@@ -23,10 +23,10 @@ public class DemoTest2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		A obj1 = new A();
-		B obj2 = new B();
+		A obj1 = new A(); //superclass object
+		B obj2 = new B(); //subclass object
 		
-		//B obj3 = new A(); // creating superclass object with a subclass reference is not possible
+		//B obj3 = new A(); // creating superclass object with a subclass reference/type is not possible
 		A obj4 = new B(); //creating subclas method with a superclass reference/type is possible
 		obj4.dis1(); // only overriden methods or methods that exist in class A will be accessible through
 		//object B. Other class B methods will be hidden. Possible because of inheritance
@@ -38,6 +38,17 @@ public class DemoTest2 {
 		obj5.dis1(); //now we can call all methods
 		obj5.dis2();
 		obj5.dis3();
+		
+		//Be default all classes extend the Object class
+		
+		A obj6 = new A();
+		Object obj7 = new A(); //superclass type, A class object. this object has now idea about the native methods
+		//of class A
+		
+		obj6.dis1();
+		A obj8 = (A)obj7; //We need to typecast if we want to access the other methods.downlevel typecasting
+		obj8.dis1();
+	
 	}
 
 }
