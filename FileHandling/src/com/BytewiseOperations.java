@@ -28,16 +28,31 @@ public class BytewiseOperations {
 		//if it does exist, it will override it
 		System.out.println("Please enter the data");
 		int ch;
+		fos.write('\n');
 		while((ch = dis.read()) != '@') {
 			System.out.println(ch+ "=" + (char)ch);
 			fos.write(ch);
 		}
+		fos.write('\n'); //write new line after the user has finished inserting the data
 		fos.close();
 		System.out.println("Data stored in file");
 		
 		FileInputStream fi = new FileInputStream("abc.txt");
 		int data = fi.read(); //will read first character
 		System.out.println("The byte read is "+ (char)data);
+		
+		//source: file
+		//destination: file/console
+		
+		FileOutputStream fos2 = new FileOutputStream("xyz.txt");
+		
+		int ch2;
+		
+		while((ch2 = fi.read()) != -1) {  //-1 is the EOF in java reading each byte from abc and write it to xyz
+			fos2.write(ch2);
+		}
+		fi.close();
+		fos2.close();
 		
 	}
 
